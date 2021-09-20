@@ -1,0 +1,39 @@
+<!-- Сверстайте кнопку, клик на которую будет выводить данные о размерах экрана с помощью alert.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            background: none;
+            outline: none;
+            width: 100px;
+            height: 50px;
+            color: white;
+            background-color: blue;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 100%;
+            cursor: pointer;
+        }
+    </style>
+    <button class="button" onclick="btn()">Click</button>
+    <script>
+        function btn(){
+            var width = window.screen.width.toString();
+            var height = window.screen.height.toString();
+            alert(`Ваш размер экрана:  ${width}x${height}`);
+        }
+    </script>
+</body>
+</html>
